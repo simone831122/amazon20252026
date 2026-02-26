@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025-2026亚马逊数据报告与趋势策略 | by 娜娜 Simone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Noto Sans SC', sans-serif; }
+        
+        .chart-wrapper {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        
+        @media (min-width: 768px) {
+            .chart-wrapper { height: 350px; }
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-orange-200 selection:text-orange-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2 cursor-pointer" onclick="scrollToSection('hero')">
+                    <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center text-white font-bold shadow-md">S</div>
+                    <span class="font-bold text-lg text-slate-900 tracking-tight">Simone's Insight <span class="text-orange-600 font-black">2026</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-bold text-slate-600">
+                    <a href="#global" class="hover:text-orange-600 transition-colors">25年全球大盘</a>
+                    <a href="#competition" class="hover:text-orange-600 transition-colors">竞争格局</a>
+                    <a href="#opportunity" class="hover:text-orange-600 transition-colors">机会评估</a>
+                    <a href="#strategy" class="text-orange-600 border-b-2 border-orange-600 pb-1">2026策略</a>
+                </div>
+                <button onclick="scrollToSection('exclusive')" class="bg-slate-900 hover:bg-slate-800 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-orange-500/20">
+                    获取折扣与报告
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="pt-28 pb-12 lg:pt-36 lg:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 animate-fade-in-up">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-orange-200 bg-orange-50 text-orange-700 text-xs font-bold uppercase tracking-wide shadow-sm">
+                    2025-2026 跨年重磅发布
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-black text-slate-900 leading-tight">
+                    从“打工者”到<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">资产拥有者</span>的战略重构
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-xl">
+                    连续7年出品，60+页深度数据洞察。本交互报告由 <strong>娜娜 Simone</strong> 特别定制，基于2025年全年真实数据沉淀，助您看清大盘底牌，锁定 <strong>2026年</strong> 亚马逊高利润增长策略。
+                </p>
+                
+                <!-- CTA / Initial Social Proof -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <div class="flex items-center gap-4 bg-white p-3 rounded-xl shadow-sm border border-slate-200 hover:border-orange-300 transition-colors">
+                        <img src="微信图片_2026-02-26_212010_477.png" alt="娜娜Simone微信二维码" class="w-24 h-24 object-contain border border-slate-100 rounded p-1" onerror="this.onerror=null; this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Simone_WeChat_QR';">
+                        <div>
+                            <p class="text-xs text-slate-500 uppercase font-bold">主理人：娜娜 Simone</p>
+                            <p class="text-sm font-medium text-slate-900">扫码加我，领取60页完整版PDF</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hero Stat Card -->
+            <div class="relative">
+                <div class="absolute -inset-1 bg-gradient-to-r from-orange-400 to-pink-600 rounded-3xl blur opacity-20"></div>
+                <div class="relative bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
+                        <h3 class="font-bold text-slate-800">Simone 专属福利通道</h3>
+                        <span class="text-xs font-mono text-white bg-red-500 px-3 py-1 rounded-full font-bold shadow-sm">2026 开年特惠</span>
+                    </div>
+                    <div class="p-6 space-y-5">
+                        <div class="bg-orange-50/80 rounded-xl p-5 border border-orange-100">
+                            <p class="text-sm text-orange-800 font-bold mb-3">卖家精灵 全网最低折扣码：</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <button onclick="copyCode('KJNN72')" class="group relative flex flex-col items-center justify-center bg-white border-2 border-dashed border-orange-300 hover:border-orange-500 hover:bg-orange-50 rounded-lg p-3 transition-all cursor-pointer">
+                                    <span class="text-xs text-slate-500 mb-1">单人版包年</span>
+                                    <span class="font-mono font-black text-xl text-slate-900 group-hover:text-orange-600">KJNN72</span>
+                                    <span class="text-[10px] text-orange-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity font-bold">点击复制</span>
+                                </button>
+                                <button onclick="copyCode('KJNN78')" class="group relative flex flex-col items-center justify-center bg-white border-2 border-dashed border-orange-300 hover:border-orange-500 hover:bg-orange-50 rounded-lg p-3 transition-all cursor-pointer">
+                                    <span class="text-xs text-slate-500 mb-1">标准版及以上</span>
+                                    <span class="font-mono font-black text-xl text-slate-900 group-hover:text-orange-600">KJNN78</span>
+                                    <span class="text-[10px] text-orange-500 mt-1 opacity-0 group-hover:opacity-100 transition-opacity font-bold">点击复制</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex justify-center bg-slate-50 rounded-xl p-2 border border-slate-100">
+                            <img src="KJNN72.jpg" alt="娜娜Simone专属折扣海报" class="w-full max-h-64 object-contain rounded opacity-95 hover:opacity-100 hover:scale-[1.01] transition-all duration-300 cursor-pointer shadow-sm" onclick="scrollToSection('exclusive')" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fff7ed/ea580c?text=Simone+%E4%B8%93%E5%B1%9E%E6%B5%B7%E6%8A%A5';">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Global Market Overview -->
+    <section id="global" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 max-w-3xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">01 <span class="text-orange-600">2025</span> 全球市场数据复盘</h2>
+                <p class="text-slate-600 text-lg">
+                    2025年亚马逊GMV预估达<strong>$8,300亿美元</strong>。其中，第三方卖家(3P)贡献了近70%的份额。
+                    核心站点（美/欧）负责规模，新兴站点（爱尔兰/中东）负责增量。
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="text-slate-500 text-sm mb-2 font-medium">全球覆盖站点</div>
+                    <div class="text-3xl font-black text-slate-900">23 <span class="text-sm font-normal text-green-600 bg-green-100 px-2 py-0.5 rounded-full">+爱尔兰</span></div>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="text-slate-500 text-sm mb-2 font-medium">2025总GMV预估</div>
+                    <div class="text-3xl font-black text-slate-900">$8,300<span class="text-xl">亿</span></div>
+                </div>
+                <div class="p-6 bg-orange-50 rounded-2xl border border-orange-200 hover:shadow-md transition-shadow">
+                    <div class="text-orange-800 text-sm mb-2 font-bold">第三方卖家占比</div>
+                    <div class="text-3xl font-black text-orange-600">69%</div>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="text-slate-500 text-sm mb-2 font-medium">美国站月均流量</div>
+                    <div class="text-3xl font-black text-slate-900">31<span class="text-xl">亿</span></div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Core Markets Bar Chart -->
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-slate-800 text-lg">核心市场 GMV 分布 (亿美元)</h3>
+                        <span class="text-xs bg-slate-100 text-slate-700 px-3 py-1 rounded-full font-medium">美国占据绝对优势</span>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="marketGmvChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- 3P Share Doughnut -->
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col justify-center">
+                    <h3 class="font-bold text-slate-800 text-lg mb-2 text-center">平台GMV核心构成</h3>
+                    <p class="text-xs text-slate-500 text-center mb-6">自营偏低价标品，第三方偏高客单/品牌</p>
+                    <div class="chart-wrapper" style="height: 250px;">
+                        <canvas id="sellerShareChart"></canvas>
+                    </div>
+                    <div class="mt-6 p-4 bg-orange-50 border border-orange-100 rounded-xl text-sm text-orange-900 leading-relaxed">
+                        <strong class="text-orange-600">Simone 战略提示：</strong><br> 
+                        面向2026，平台将更依赖第三方做利润支撑。低客单标品卷供应链效率，高客单重注品牌化包装。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Competition -->
+    <section id="competition" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 max-w-3xl">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">02 竞争格局透视</h2>
+                <p class="text-slate-600 text-lg">
+                    新卖家注册量创历史新低，存量博弈加剧。更值得警惕的是，中国卖家在核心站点占比已普遍过半，
+                    这意味着2026年你的对手不再是“老外”，而是同样拥有极强供应链的“自己人”。
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8">
+                <!-- Chinese Share Chart -->
+                <div class="lg:col-span-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+                    <h3 class="font-bold text-slate-800 text-lg mb-6">各站点中国卖家占比 (%) - <span class="text-red-500 bg-red-50 px-2 py-1 rounded text-sm">红海预警</span></h3>
+                    <div class="chart-wrapper">
+                        <canvas id="chineseShareChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Trend Cards -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="bg-white p-5 rounded-2xl border-l-4 border-slate-700 shadow-sm">
+                        <h4 class="font-bold text-slate-900 mb-2">📉 卖家大洗牌</h4>
+                        <p class="text-sm text-slate-600">2025美国新增卖家不足17万。2026年不再有“小白红利”，必须构建全链路“体系化能力”。</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border-l-4 border-red-500 shadow-sm">
+                        <h4 class="font-bold text-slate-900 mb-2">⚔️ TikTok 兵临城下</h4>
+                        <p class="text-sm text-slate-600">TikTok Shop 重仓北美。策略转向：用外部内容抢夺注意力，用亚马逊做最终转化承接。</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border-l-4 border-orange-500 shadow-sm">
+                        <h4 class="font-bold text-slate-900 mb-2">🏭 产业带高度内卷</h4>
+                        <p class="text-sm text-slate-600">仅广东卖家就占32.6%。供应链同质化极快，破局点在于微创新与极速测品。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strategic Interruption CTA -->
+            <div class="mt-12 bg-slate-900 rounded-3xl p-8 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 text-white shadow-xl">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-screen filter blur-[80px] opacity-30"></div>
+                
+                <div class="relative z-10 md:w-2/3">
+                    <h3 class="text-2xl font-bold mb-3">🚀 备战2026，从源头避免价格战</h3>
+                    <p class="text-slate-300 mb-6 text-lg">
+                        在高度同质化的竞争中，掌握深层供应链是核心底牌。添加我的微信，我将亲自发送<strong>《中国跨境电商产业带地图》高清版</strong>，帮您把选品直接落实到工厂。
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="bg-white/10 backdrop-blur px-5 py-3 rounded-xl border border-white/20">
+                            <span class="block text-xs text-orange-300 mb-1">卖家精灵 单人版特惠码</span>
+                            <span class="font-mono font-bold text-xl text-white">KJNN72</span>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur px-5 py-3 rounded-xl border border-white/20">
+                            <span class="block text-xs text-orange-300 mb-1">标准版及以上特惠码</span>
+                            <span class="font-mono font-bold text-xl text-white">KJNN78</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative z-10 flex-shrink-0">
+                    <div class="bg-white p-3 rounded-2xl shadow-2xl flex flex-col items-center">
+                        <img src="微信图片_2026-02-26_212010_477.png" alt="娜娜Simone微信二维码" class="w-40 h-40 object-contain rounded" onerror="this.onerror=null; this.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=Simone_WeChat_QR';">
+                        <p class="text-center text-slate-900 font-bold text-sm mt-3">扫码领地图</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Market Opportunities (Interactive Radar) -->
+    <section id="opportunity" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">03 核心市场存活率与机会评估</h2>
+                <p class="text-slate-600 text-lg">
+                    不要只被单一的GMV数字迷惑。我们通过7个核心生存维度（长期性、规模潜力、多样性、流量、收入分布、客均收入、新店激活率）为您透视五大核心站点的真实难度。
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Radar Chart -->
+                <div class="bg-slate-50 rounded-3xl p-4 md:p-8 shadow-inner border border-slate-100">
+                    <div class="chart-wrapper" style="height: 400px; max-height: 500px;">
+                        <canvas id="opportunityRadar"></canvas>
+                    </div>
+                    <div class="flex justify-center gap-4 mt-6">
+                        <button onclick="toggleDataset(0)" class="px-4 py-2 text-sm font-medium rounded-full border border-orange-500 text-orange-600 bg-white hover:bg-orange-50 transition-colors shadow-sm">🇺🇸 美国大盘</button>
+                        <button onclick="toggleDataset(1)" class="px-4 py-2 text-sm font-medium rounded-full border border-blue-500 text-blue-600 bg-white hover:bg-blue-50 transition-colors shadow-sm">🇯🇵 日本市场</button>
+                        <button onclick="toggleDataset(2)" class="px-4 py-2 text-sm font-medium rounded-full border border-green-500 text-green-600 bg-white hover:bg-green-50 transition-colors shadow-sm">🇩🇪 德国市场</button>
+                    </div>
+                </div>
+
+                <!-- Analysis Text -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-2 h-6 bg-orange-500 rounded-full"></span>
+                            <h3 class="text-xl font-bold text-slate-900">1. 美国站 (综合分: 53)</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            <strong>最强试错场 + 最高天花板。</strong> 新卖家激活率极高(60)，验证需求最快。但收入分布得分偏低(45)，说明存在严重的“赢者通吃”两极分化。2026年想在美国赚钱，高度依赖体系化的广告与库存管理。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-2 h-6 bg-blue-500 rounded-full"></span>
+                            <h3 class="text-xl font-bold text-slate-900">2. 日本站 (综合分: 51)</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            <strong>更讲适配，高复利抗卷。</strong> 卖家长期存活率得分最高(75)。完全不适合无脑铺货，必须通过深度的本地化(说明书/细节包装/严谨客服)才能建立壁垒。
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-2 h-6 bg-green-500 rounded-full"></span>
+                            <h3 class="text-xl font-bold text-slate-900">3. 德国站 (综合分: 46)</h3>
+                        </div>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            <strong>高门槛的欧洲练级场。</strong> 卖家平均收入极高，但整体流量指标(27)偏弱。对EPR合规、VAT税务、Listing严谨度要求极高，是用硬功夫赚汇率差的市场。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Strategy 2026 -->
+    <section id="strategy" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-black text-slate-900 mb-10 text-center">04 面向 <span class="text-orange-600">2026</span>：经营与流量策略</h2>
+            <p class="text-center text-slate-600 mb-12 max-w-3xl mx-auto text-lg">
+                电商大盘已告别暴涨期，增速回归常态（5-10%）。在2026这个温和增长时代，超额收益必须来自于“精细化抢份额”，站外内容引流与全渠道防守成为必修课。
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Traffic Sources -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-3">站外社媒引流结构 (Top Sources)</h3>
+                    <div class="flex flex-col sm:flex-row items-center gap-8">
+                        <div class="w-full sm:w-1/2 chart-wrapper" style="height: 220px;">
+                            <canvas id="trafficPie"></canvas>
+                        </div>
+                        <div class="w-full sm:w-1/2 text-sm text-slate-600 space-y-4">
+                            <div>
+                                <strong class="text-red-600 text-base block mb-1">YouTube (62.9%)</strong>
+                                绝对的带货主战场。测评、参数对比、开箱视频的转化率最高。
+                            </div>
+                            <div>
+                                <strong class="text-blue-600 text-base block mb-1">Facebook (13.3%)</strong>
+                                私域沉淀，更适合老客再营销与群组发帖。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platform Strategy -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 border-b border-slate-100 pb-3">Temu vs Amazon 攻防战</h3>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center font-bold text-lg">1</div>
+                            <div>
+                                <h4 class="font-bold text-base text-slate-900 mb-1">避开低价战泥潭</h4>
+                                <p class="text-sm text-slate-500">切忌在同质化产品上与Temu对标。用“组合套装/核心功能差异/材质升级”在亚马逊建立高价值锚点。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-bold text-lg">2</div>
+                            <div>
+                                <h4 class="font-bold text-base text-slate-900 mb-1">多平台分工作战</h4>
+                                <p class="text-sm text-slate-500">将低端线或尾货放到低价平台走量清仓；全力将亚马逊打造成利润款、品牌旗舰款的信任阵地。</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center font-bold text-lg">3</div>
+                            <div>
+                                <h4 class="font-bold text-base text-slate-900 mb-1">大促流量前置</h4>
+                                <p class="text-sm text-slate-500">Prime Day等大促已被对手拉长周期截流。2026年必须提前2-4周做站外种草蓄水，大促期间再集中回流收割。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Exclusive Conversion -->
+    <section id="exclusive" class="py-20 bg-white border-t-4 border-orange-500">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-6">🎉 聚焦2026，做真正的“资产拥有者”</h2>
+            <p class="text-slate-600 mb-12 max-w-2xl mx-auto text-lg">
+                竞争的尽头永远是认知和底层工具的博弈。希望这份深度报告能帮您在 2026 年看清本质、避开内耗。
+                以下是 Simone 为您准备的专属护航资源，请务必保存。
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-10 text-left">
+                <!-- Code Card -->
+                <div class="bg-gradient-to-b from-orange-50 to-white rounded-3xl p-8 border border-orange-200 relative overflow-hidden group shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="absolute top-0 right-0 bg-red-500 text-white text-sm font-bold px-4 py-1.5 rounded-bl-xl shadow-sm">2026 全网底价保障</div>
+                    <h3 class="text-2xl font-black text-orange-900 mb-4">1. 卖家精灵 专属特惠</h3>
+                    <p class="text-base text-orange-800 mb-6 font-medium">官方购买时直接输入下方代码，立享全网至高优惠：</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between items-center bg-white p-4 rounded-2xl border-2 border-orange-100 shadow-sm cursor-pointer hover:border-orange-500 hover:bg-orange-50 transition-all group/btn" onclick="copyCode('KJNN72')">
+                            <div>
+                                <span class="block text-xs text-slate-500 font-bold mb-1">单人版包年 专享码</span>
+                                <span class="font-mono text-2xl font-black text-slate-900 group-hover/btn:text-orange-600">KJNN72</span>
+                            </div>
+                            <span class="text-sm bg-orange-500 text-white font-bold px-4 py-2 rounded-lg shadow-sm group-hover/btn:bg-orange-600">一键复制</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-white p-4 rounded-2xl border-2 border-orange-100 shadow-sm cursor-pointer hover:border-orange-500 hover:bg-orange-50 transition-all group/btn" onclick="copyCode('KJNN78')">
+                            <div>
+                                <span class="block text-xs text-slate-500 font-bold mb-1">标准版及以上 专享码</span>
+                                <span class="font-mono text-2xl font-black text-slate-900 group-hover/btn:text-orange-600">KJNN78</span>
+                            </div>
+                            <span class="text-sm bg-orange-500 text-white font-bold px-4 py-2 rounded-lg shadow-sm group-hover/btn:bg-orange-600">一键复制</span>
+                        </div>
+                    </div>
+                    <img src="KJNN72.jpg" alt="娜娜Simone专属折扣海报" class="w-full h-auto object-contain rounded-xl shadow border border-orange-100 transform group-hover:scale-[1.02] transition-transform duration-500" onerror="this.onerror=null; this.src='https://placehold.co/400x500/fff7ed/ea580c?text=Simone+%E4%B8%93%E5%B1%9E%E6%B5%B7%E6%8A%A5';">
+                </div>
+
+                <!-- Community Card -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-2xl font-black text-slate-900 mb-4">2. 链接高阶卖家圈子</h3>
+                    <p class="text-base text-slate-600 mb-6">
+                        想要获取各站点 <strong>Top 1%/5% 销售排名阈值表</strong>？<br>
+                        想深度探讨 2026 年高利润防守打法？
+                    </p>
+                    <div class="p-3 bg-white rounded-2xl shadow-xl border border-slate-200 mb-6 inline-block">
+                        <img src="微信图片_2026-02-26_212010_477.png" alt="娜娜Simone微信二维码" class="w-56 h-56 object-contain rounded-xl" onerror="this.onerror=null; this.src='https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Simone_WeChat_QR';">
+                    </div>
+                    <p class="font-black text-slate-900 text-xl">主理人：娜娜 Simone</p>
+                    <p class="text-sm text-slate-500 mt-2 bg-slate-200 px-3 py-1 rounded-full font-medium">深耕亚马逊10年+ / 您的长期复利参谋</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-sm text-slate-400 border-t border-slate-200 pt-8 font-medium">
+                &copy; 2026 亚马逊年度数据与战略报告 (Simone独家定制版). All Data sourced from Marketplace Pulse / Sellers Sprite.
+            </div>
+        </div>
+    </section>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-8 right-8 bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-20 opacity-0 transition-all duration-300 z-50 flex items-center gap-3 font-bold border border-slate-700">
+        <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+        <span>神券代码已成功复制！</span>
+    </div>
+
+    <script>
+        // --- 1. Interaction Logic ---
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyCode(code) {
+            const textArea = document.createElement("textarea");
+            textArea.value = code;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            textArea.style.top = "0";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                const successful = document.execCommand('copy');
+                if (successful) {
+                    const toast = document.getElementById('toast');
+                    toast.classList.remove('translate-y-20', 'opacity-0');
+                    setTimeout(() => {
+                        toast.classList.add('translate-y-20', 'opacity-0');
+                    }, 2500);
+                }
+            } catch (err) {
+                console.error('无法复制文本', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        // --- 2. Chart Configurations ---
+        document.addEventListener('DOMContentLoaded', () => {
+            Chart.defaults.font.family = "'Noto Sans SC', sans-serif";
+            Chart.defaults.color = '#64748B';
+            Chart.defaults.font.size = 13;
+
+            // Chart 1: Market GMV (Bar)
+            new Chart(document.getElementById('marketGmvChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['美国', '英国', '德国', '法国', '意大利', '加拿大', '西班牙', '巴西', '印度', '日本', '墨西哥'],
+                    datasets: [{
+                        label: '预估 GMV (亿美元)',
+                        data: [3050, 540, 510, 380, 300, 250, 170, 150, 140, 130, 80],
+                        backgroundColor: (ctx) => ctx.dataIndex === 0 ? '#F97316' : '#94A3B8',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true, grid: { borderDash: [2, 4], color: '#E2E8F0' } }, x: { grid: { display: false } } }
+                }
+            });
+
+            // Chart 2: 3P Share (Doughnut)
+            new Chart(document.getElementById('sellerShareChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['第三方卖家 (3P)', '亚马逊自营 (1P)'],
+                    datasets: [{
+                        data: [69, 31],
+                        backgroundColor: ['#F97316', '#CBD5E1'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '75%',
+                    plugins: { legend: { position: 'bottom', labels: { padding: 20, font: {weight: 'bold'} } } }
+                }
+            });
+
+            // Chart 3: Chinese Share (Horizontal Bar)
+            new Chart(document.getElementById('chineseShareChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['墨西哥', '西班牙', '德国', '意大利', '法国', '美国', '日本', '英国'],
+                    datasets: [{
+                        label: '中国卖家占比 (%)',
+                        data: [71.6, 59.8, 59.5, 59.5, 59.1, 54.6, 53.5, 51.3],
+                        backgroundColor: '#EF4444',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { x: { max: 100, grid: { color: '#E2E8F0' } }, y: { grid: { display: false }, ticks: { font: {weight: 'bold'} } } }
+                }
+            });
+
+            // Chart 4: Opportunity Radar (Complex)
+            window.radarChart = new Chart(document.getElementById('opportunityRadar'), {
+                type: 'radar',
+                data: {
+                    labels: ['长期存活', '规模潜力', '多样性', '流量充足度', '分布友好度', '平均收入', '新店激活率'],
+                    datasets: [
+                        {
+                            label: '美国',
+                            data: [53, 51, 50, 50, 45, 56, 60],
+                            borderColor: '#F97316',
+                            backgroundColor: 'rgba(249, 115, 22, 0.25)',
+                            pointBackgroundColor: '#F97316',
+                            borderWidth: 2
+                        },
+                        {
+                            label: '日本',
+                            data: [75, 54, 51, 41, 65, 37, 50],
+                            borderColor: '#3B82F6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.25)',
+                            pointBackgroundColor: '#3B82F6',
+                            borderWidth: 2,
+                            hidden: true 
+                        },
+                        {
+                            label: '德国',
+                            data: [56, 48, 58, 27, 55, 50, 42],
+                            borderColor: '#10B981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.25)',
+                            pointBackgroundColor: '#10B981',
+                            borderWidth: 2,
+                            hidden: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        r: {
+                            angleLines: { color: '#E2E8F0' },
+                            grid: { color: '#E2E8F0' },
+                            pointLabels: { font: { size: 12, weight: 'bold' }, color: '#334155' }
+                        }
+                    }
+                }
+            });
+
+            // Chart 5: Traffic Sources (Pie)
+            new Chart(document.getElementById('trafficPie'), {
+                type: 'pie',
+                data: {
+                    labels: ['YouTube', 'Facebook', 'Reddit', 'X (Twitter)', 'Pinterest', 'Other'],
+                    datasets: [{
+                        data: [62.9, 13.3, 7.6, 5.2, 3.7, 7.3],
+                        backgroundColor: ['#EF4444', '#3B82F6', '#F97316', '#0F172A', '#E11D48', '#94A3B8'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+        });
+
+        // Toggle function for Radar Chart
+        function toggleDataset(index) {
+            const meta = window.radarChart.getDatasetMeta(index);
+            meta.hidden = meta.hidden === null ? !window.radarChart.data.datasets[index].hidden : null;
+            window.radarChart.update();
+        }
+    </script>
+</body>
+</html>
